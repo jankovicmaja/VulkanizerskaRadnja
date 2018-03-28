@@ -34,8 +34,8 @@ public class AutoGuma {
 	}
 	/**
 	 * Metoda koja postavlja vrednost atributa markaModel
-	 * @param nova vrednost marke i modela
-	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju nedozvoljenih vrednosti(null || markaModel.length()<3)
+	 * @param markaModel koji predstavlja novu vrednost marke i modela
+	 * @throws java.lang.RuntimeException u slucaju nedozvoljenih vrednosti(null || markaModel.length()<3)
 	 */
 	public void setMarkaModel(String markaModel) {
 		if (markaModel==null || markaModel.length()<3)
@@ -51,8 +51,8 @@ public class AutoGuma {
 	}
 	/**
 	 * Metoda koja postavlja vrednost atributa precnik
-	 * @param nova vrednost precnika
-	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<13 || >22)
+	 * @param precnik koja predstavlja novu vrednost precnika
+	 * @throws java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<13 || >22)
 	 * 
 	 */
 	public void setPrecnik(int precnik) {
@@ -69,8 +69,8 @@ public class AutoGuma {
 	}
 	/**
 	 * Metoda koja postavlja vrednost atributa sirina
-	 * @param nova vrednost atributa sirina
-	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<135 || >355)
+	 * @param sirina koji predstavlja novu vrednost atributa sirina
+	 * @throws java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<135 || >355)
 	 * 
 	 */
 	public void setSirina(int sirina) {
@@ -88,8 +88,8 @@ public class AutoGuma {
 	
 	/**
 	 * Metoda koja postavlja vrednost atributa visina
-	 * @param nova vrednost atributa visina
-	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<25 || >95)
+	 * @param visina koji predstavlja novu vrednost atributa visina
+	 * @throws java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<25 || >95)
 	 * 
 	 */
 	public void setVisina(int visina) {

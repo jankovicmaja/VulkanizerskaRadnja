@@ -17,9 +17,9 @@ public class VulkanizerskaRadnja {
 			new LinkedList<AutoGuma>();
 	/**
 	 * Metoda koja dodaje novu gumu u postojecu listu gume
-	 * @param guma a koju treba dodati u datu listu
-	 * @throws baca se izuzetak java.lang.NullPointerException u slucaju null vrednosti
-	 * @throws baca se izuzetak java.lang.RuntimeException ako guma a vec postoji u listi
+	 * @param a guma koju treba dodati u datu listu
+	 * @throws java.lang.NullPointerException u slucaju null vrednosti
+	 * @throws java.lang.RuntimeException ako guma a vec postoji u listi
 	 */
 	public void dodajGumu(AutoGuma a) {
 			if (a == null)
