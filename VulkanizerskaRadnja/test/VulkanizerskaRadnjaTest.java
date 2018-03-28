@@ -2,6 +2,8 @@ package gume.radnja;
 
 import static org.junit.Assert.*;
 
+import java.util.LinkedList;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,6 +45,18 @@ public class VulkanizerskaRadnjaTest {
 		//nadjena je greska u for petlji u if-u u metodi pronadjiGumu(): porede se celi objekti, a trebalo bi da se porede 
 		//po atributu markaModel-ispravljeno
 	}
+	
+	@Test
+	public void testDodajGumuPrviScenario1() {
+		ag.setMarkaModel("nekaMarkaIModel");
+		ag.setPrecnik(20);
+		ag.setSirina(221);
+		ag.setVisina(31);
+		vr.dodajGumu(ag);
+		LinkedList<AutoGuma> lista = vr.pronadjiGumu(ag.getMarkaModel());
+		assertEquals(ag, lista.getFirst());
+	}
+	
 
 	@Test (expected = java.lang.RuntimeException.class)
 	public void testDodajGumuDrugiScenarioVecPostoji() {
@@ -63,6 +77,17 @@ public class VulkanizerskaRadnjaTest {
 		ag.setMarkaModel("nekaMarkaIModel");
 		vr.dodajGumu(ag);
 		assertEquals(1, vr.pronadjiGumu(ag.getMarkaModel()).size());
+	}
+	
+	@Test
+	public void testPronadjiGumuPrviScenario1() {
+		ag.setMarkaModel("nekaMarkaIModel");
+		ag.setPrecnik(20);
+		ag.setSirina(221);
+		ag.setVisina(31);
+		vr.dodajGumu(ag);
+		LinkedList<AutoGuma> listica = vr.pronadjiGumu(ag.getMarkaModel());
+		assertEquals(ag, listica.getFirst());
 	}
 	
 	@Test
@@ -93,4 +118,5 @@ public class VulkanizerskaRadnjaTest {
 		vr.dodajGumu(ag1);
 		assertEquals(vr.pronadjiGumu(ag.getMarkaModel()).size(),2);
 	}
+	
 }
