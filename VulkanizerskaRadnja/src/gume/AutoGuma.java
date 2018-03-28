@@ -1,30 +1,41 @@
 package gume;
 
 /**
- * 
+ * Klasa koja predstavlja jednu gumu
  * @author Maja Jankovic
- * @version Prva verzija ove klase od strane autora Maja Jankovic
+ * @version 1.0.0
  *
  */
 public class AutoGuma {
+	/**
+	 * Atribut koji predstavlja marku i model jedne gume
+	 */
 	private String markaModel = null;
+	/** 
+	 * Atribut koji predstavlja precnik jedne gume
+	 */
 	private int precnik = 0;
+	/**
+	 * Atribut koji predstavlja sirinu jedne gume
+	 */
 	private int sirina = 0;
+	/**
+	 * Atribut koji predstavlja visinu jedne gume
+	 */
 	private int visina = 0;
 	
 	/**
-	 * @return tip povratne vrednosti je String vrednost; ova metoda vraca vrednost atributa markaModel
+	 * Metoda koja vraca vrednost atributa markaModel
+	 * @return tip povratne vrednosti je String vrednost marke i modela gume
 	 *
 	 */
 	public String getMarkaModel() {
 		return markaModel;
 	}
 	/**
-	 * 
-	 * @param markaModel ne sme biti null vrednost i njegova duzina ne sme biti manja od 3, u suprotnom se baca izuzetak; njegova vrednost se dodeljuje istoimenom atributu
-	 * @throws baca se izuzetak klase {@link RuntimeException} u slucaju nedozvoljenih vrednosti
-	 *
-	 *
+	 * Metoda koja postavlja vrednost atributa markaModel
+	 * @param nova vrednost marke i modela
+	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju nedozvoljenih vrednosti(null || markaModel.length()<3)
 	 */
 	public void setMarkaModel(String markaModel) {
 		if (markaModel==null || markaModel.length()<3)
@@ -32,16 +43,16 @@ public class AutoGuma {
 		this.markaModel = markaModel;
 	}
 	/**
-	 * 
-	 * @return tip povratne vrednosti je ceo broj- integer vrednost; ova metoda vraca vrednost atributa precnik
+	 * Metoda koja vraca vrednost atributa precnik
+	 * @return tip povratne vrednosti je ceo broj- integer vrednost precnika
 	 */
 	public int getPrecnik() {
 		return precnik;
 	}
 	/**
-	 * 
-	 * @param precnik ne sme biti kraci od 13, a duzi od 22 jer se u tom slucaju baca izuzetak; njegova vrednost se dodaje istoimenom atributu
-	 * @throws baca se izuzetak klase {@link RuntimeException} u slucaju unosa nedozvoljenih vrednosti
+	 * Metoda koja postavlja vrednost atributa precnik
+	 * @param nova vrednost precnika
+	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<13 || >22)
 	 * 
 	 */
 	public void setPrecnik(int precnik) {
@@ -50,16 +61,16 @@ public class AutoGuma {
 		this.precnik = precnik;
 	}
 	/**
-	 * 
-	 * @return tip povratne vrednosti je ceo broj-integer vrednost; vraca se vrednost atributa sirina
+	 * Metoda koja vraca vrednost atributa sirina
+	 * @return tip povratne vrednosti je ceo broj-integer vrednost sirine
 	 */
 	public int getSirina() {
 		return sirina;
 	}
 	/**
-	 * 
-	 * @param sirina ne sme biti manja od 135 i veca od 355, jer se u suprotnom baca izuzetak; njegova vrednost se dodeljuje istoimenom atributu
-	 * @throws baca se izuzetak klase {@link RuntimeException} u slucaju unosa nedozvoljenih vrednosti
+	 * Metoda koja postavlja vrednost atributa sirina
+	 * @param nova vrednost atributa sirina
+	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<135 || >355)
 	 * 
 	 */
 	public void setSirina(int sirina) {
@@ -68,17 +79,17 @@ public class AutoGuma {
 		this.sirina = sirina;
 	}
 	/**
-	 * 
-	 * @return tip povratne vrednosti je ceo broj-integer vrednost; ova metoda vraca vrednost atributa visina
+	 * Metoda koja vraca vrednost atributa visina
+	 * @return tip povratne vrednosti je ceo broj-integer vrednost visine
 	 */
 	public int getVisina() {
 		return visina;
 	}
 	
 	/**
-	 * 
-	 * @param visina ne sme biti manja od 25 i veca 95, inace se baca izuzetak; njegova vrednost se dodeljuje istoimenom atributu
-	 * @throws baca se izuzetak klase {@link RuntimeException} u slucaju unosa nedozvoljenih vrednosti
+	 * Metoda koja postavlja vrednost atributa visina
+	 * @param nova vrednost atributa visina
+	 * @throws baca se izuzetak java.lang.RuntimeException u slucaju unosa nedozvoljenih vrednosti(<25 || >95)
 	 * 
 	 */
 	public void setVisina(int visina) {
@@ -87,8 +98,8 @@ public class AutoGuma {
 		this.visina = visina;
 	}
 	
-	/**
-	 * @return tip povratne vrednosti je String vrednost- String koji u jednoj recenici prikazuje vrednost svih navedenih atributa u klasi
+	/**Metoda koja vraca String koji prikazuje vrednosti svih prethodno navedenih atributa 
+	 * @return String o  svim informacijama koje su vezane za marku i model, precnik, sirinu i visinu gume
 	 */
 	@Override
 	public String toString() {
@@ -96,8 +107,9 @@ public class AutoGuma {
 				", sirina=" + sirina + ", visina=" + visina + "]";
 	}
 	/**
-	 * @param obj koji predstavlja objekat klase Object
-	 * @return tip povratne vrednosti je boolean vrednost
+	 * Metoda koja vraca boolean vrednost u zavisnosti od toga da li su neke dve gume jednake po svim svojim atributima
+	 * @param obj koji predstavlja objekat klase Object sa kojim se guma poredi
+	 * @return tip povratne vrednosti je boolean da li su gume iste po svim atributima ili ne 
 	 */
 	@Override
 	public boolean equals(Object obj) {
