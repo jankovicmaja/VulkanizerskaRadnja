@@ -1,4 +1,4 @@
-package gume.radnja;
+package gume.radnja.test;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import gume.AutoGuma;
+import gume.radnja.VulkanizerskaRadnja;
 
 public class VulkanizerskaRadnjaTest {
 	
@@ -91,6 +92,5 @@ public class VulkanizerskaRadnjaTest {
 		ag1.setVisina(33);
 		vr.dodajGumu(ag1);
 		assertEquals(vr.pronadjiGumu(ag.getMarkaModel()).size(),2);
-		
 	}
 }
